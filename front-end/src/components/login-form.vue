@@ -1,6 +1,6 @@
 <template>
     <div class="text-center">
-        <form action="" class="form-signin">
+        <form action="" class="form-signin" v-on:submit.prevent="onSubmit">
             <img class="mb-4" src="../assets/logo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Por favor faça seu login</h1>
 
@@ -8,7 +8,7 @@
             <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
 
             <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <input type="password" id="inputPassword" ref="inputPassword" class="form-control" placeholder="Password" required="">
 
             <div class="checkbox mb-3">
                 <label>
@@ -32,10 +32,19 @@
 
 
 <script>
+    export default {
+        name: 'FormLogin',
+        props: {},
+        methods: {
+            onSubmit: function(e) {
+                e.preventDefault();
+                //var email       = document.getElementById('inputEmail').value;
+                //var password    = document.getElementById('inputPassword').value;
 
+                //let fields = {email : email ,password : password}
 
-export default {
-    name: 'FormLogin',
-    props: {}
-}
+                //console.log(this.$refs.inputPasswords.value)
+            }
+        }
+    }
 </script>
