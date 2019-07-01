@@ -1,7 +1,5 @@
 # Controle de estoquei - OCT
 
----
-
 ## Front - end 
 
 ### Tudo que você vai aprender
@@ -22,5 +20,3 @@
 
 
 ## Back - end 
-
---- 
